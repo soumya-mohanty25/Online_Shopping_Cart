@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* Profile Container */
+body {
+    padding-top: 80px; /* equal to or more than navbar height */
+}
+
+.profile-container {
+    width: 50%;
+    margin: 110px auto -10px auto; /* Increased top margin for spacing from navbar */
+    padding: 20px;
+    background: #86B9E2;
+    box-shadow: 0px 4px 10px rgba(2, 2, 2, 0.2); /* Fix the invalid alpha value */
+    border-radius: 8px;
+    text-align: center;
+    padding-top:20px;
+}
+
+/* Profile Header */
+.profile-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Profile Information */
+.profile-container p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Profile Information */
+.profile-container p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Highlight Strong Text */
+.profile-container strong {
+    color: #222;
+}
+
+/* Edit Profile Button */
+.edit-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #e65c00;
+}
+
+.logout-button{
+	display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color:#f8363c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #bd090d;
+}

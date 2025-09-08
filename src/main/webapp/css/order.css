@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* Main Order Container */
+.order-container {
+    max-width: 80%;
+    max-height:40%;
+    margin: auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 180px; /* ⬅ Increased to push below fixed navbar */
+}
+
+/* Heading */
+.order-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+/* Order Table */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 70px;
+}
+
+/* Table Head */
+.order-table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Table Rows */
+.order-table td {
+    padding: 15px 10px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternate Row Color */
+.order-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Product Image */
+.order-table img {
+    border-radius: 12px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+.remove-btn,
+.proceed-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 5px;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.proceed-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.proceed-btn:hover {
+    background-color: #1e8449;
+}
+
+/* Empty Order Message */
+.empty-order-msg {
+    text-align: center;
+    font-size: 22px;
+    color: #888;
+    margin-top: 50px;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Order ID Section Row */
+.order-table tr td[colspan="6"] h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 10px 0;
+}
+
+/* Total Amount Row */
+.order-table tr:last-child td {
+    font-size: 18px;
+    color: #34495e;
+}

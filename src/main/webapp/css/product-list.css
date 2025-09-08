@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+.productlist {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;      /* Center vertically (optional) */
+    width: 100%;
+    min-height: 60vh;
+    padding: 200px;
+    box-sizing: border-box; /* Make padding behave nicely */
+}
+
+.productlist table {
+    width: 100%; /* FULL width inside container */
+    max-width: 1000px; /* Limit max width for beautiful look */
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/* Remove row and column borders */
+.productlist table th,
+.productlist table td {
+    border: none;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Header row styling */
+.productlist table th {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+}
+
+/* Alternate row background */
+.productlist table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table row hover effect */
+.productlist table tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Style for action links */
+.productlist table td a {
+    text-decoration: none;
+    color: #3abe9b;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.productlist table td a:hover {
+    color: black;
+}
+
+
+/* Style for Edit and Delete buttons */
+.edit-btn, .delete-btn {
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.edit-btn {
+    background-color: yellow;
+    color: black;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: darkorange;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}

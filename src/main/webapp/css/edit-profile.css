@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* Edit Profile Container */
+.edit-profile-container {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    padding-top:100px;
+}
+
+/* Edit Profile Header */
+.edit-profile-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.edit-profile-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels */
+.edit-profile-container label {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0 4px;
+    display: block;
+    text-align: left;
+    width: 80%;
+}
+
+/* Input Fields */
+.edit-profile-container input,
+.edit-profile-container select {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+/* Input Focus Effect */
+.edit-profile-container input:focus,
+.edit-profile-container select:focus {
+    border-color: #ff6600;
+}
+
+/* Submit Button */
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #e65c00;
+}
