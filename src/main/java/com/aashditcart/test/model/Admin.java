@@ -34,4 +34,5 @@ public class Admin {
 	
 	@Column(name = "role")
     private String role = "ADMIN";
+	
 }

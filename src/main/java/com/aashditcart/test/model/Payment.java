@@ -34,4 +34,7 @@ public class Payment {
 	    @OneToOne
 	    @JoinColumn(name = "order_id", nullable = true)
 	    private Order order;
+	    
+//		@Column(name = "is_active")
+//		private Boolean isActive;
 }

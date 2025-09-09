@@ -32,4 +32,7 @@ public class OrderItem {
     
     @Column(name = "price")
     private double price;
+    
+//	@Column(name = "is_active")
+//	private Boolean isActive;
 }

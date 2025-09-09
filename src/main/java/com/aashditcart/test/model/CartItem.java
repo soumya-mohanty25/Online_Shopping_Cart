@@ -33,6 +33,9 @@ public class CartItem {
     
     @Column(name = "price")
     private double price;
+    
+//	@Column(name = "is_active")
+//	private Boolean isActive;
 
 	public CartItem(Long id, Cart cart, Product product, int quantity) {
 		super();

@@ -37,6 +37,9 @@ public class Order {
     
     @Column(name = "status")
     private String status;
+    
+//	@Column(name = "is_active")
+//	private Boolean isActive;
 
 	public void setOrderDate(Date date) {
 		// TODO Auto-generated method stub

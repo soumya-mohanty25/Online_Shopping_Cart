@@ -1,13 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-    <!-- Header Section -->
     <head>
              <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/images/logo.png">
     </head>
     <header class="header">
         <div class="header-left">
             <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo" class="header-logo">
-            <h1>AASHDIT CART</h1>
+            <h1>NUTRITECH CART</h1>
         </div>
 
         <form action="${pageContext.request.contextPath}/products/search" method="get" class="search-container">

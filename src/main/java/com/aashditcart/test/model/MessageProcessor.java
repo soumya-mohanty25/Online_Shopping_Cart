@@ -41,6 +41,9 @@ public class MessageProcessor {
 	@Column(name = "updated_date")
 	private Date updatedOn;
 	
+//	@Column(name = "is_active")
+//	private Boolean isActive;
+	
 	public MessageProcessor(){}
 	
 	public MessageProcessor(String message, String mobileNumber, String templateName) {
