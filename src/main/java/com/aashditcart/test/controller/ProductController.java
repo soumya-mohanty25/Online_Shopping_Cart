@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @ControllerAdvice
 @Slf4j
 @RequestMapping("/products")
-public class ProductController {
+public class ProductController extends BaseController{
 
 	private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
 
@@ -38,7 +38,7 @@ public class ProductController {
 	             List<Product> products = productService.getAllProducts();
 	             model.addAttribute("products", products);
 	             model.addAttribute("product", new Product());
-	             return "admin-productManage";
+	             return renderwithbase(model,"/pages/admin/admin-productManage");
 	         } catch (Exception e) {
 	             logger.error("Error loading manage products page", e);
 	             return "error";
@@ -62,7 +62,7 @@ public class ProductController {
 	    	try {
 	            List<Product> products = productService.getAllProducts();
 	            model.addAttribute("products", products);
-	            return "admin-productlist";
+	            return renderwithbase(model,"/pages/admin/admin-productlist");
 	        } catch (Exception e) {
 	            logger.error("Error loading product list", e);
 	            return "error";
@@ -74,7 +74,7 @@ public class ProductController {
 	    	try {
 	            Product product = productService.getProductById(id);
 	            model.addAttribute("product", product);
-	            return "admin-editProduct";
+	            return renderwithbase(model,"/pages/admin/admin-editProduct");
 	        } catch (Exception e) {
 	            logger.error("Error showing edit form for product ID: {}", id, e);
 	            return "error";
@@ -111,7 +111,7 @@ public class ProductController {
 	    	 try {
 	             List<Product> products = productService.getAllProducts();
 	             model.addAttribute("products", products);
-	             return "user-shopProduct";
+	             return renderwithbase(model,"/pages/user/user-shopProduct");
 	         } catch (Exception e) {
 	             logger.error("Error showing products for customer", e);
 	             return "error";
@@ -124,7 +124,7 @@ public class ProductController {
                List<Product> results = productService.searchByName(keyword);
                model.addAttribute("products", results);
                model.addAttribute("searchKeyword", keyword);
-               return "user-searchProduct";
+               return renderwithbase(model,"/pages/user/user-searchProduct");
            } catch (Exception e) {
                logger.error("Error searching products with keyword: {}", keyword, e);
                return "error";

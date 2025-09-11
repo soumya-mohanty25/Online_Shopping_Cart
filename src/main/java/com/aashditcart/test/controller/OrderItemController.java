@@ -22,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 @ControllerAdvice
 @Slf4j
 @RequestMapping("/orderItems")
-public class OrderItemController {
+public class OrderItemController extends BaseController{
 
 	private static final Logger logger = LoggerFactory.getLogger(OrderItemController.class);
 
@@ -33,7 +33,7 @@ public class OrderItemController {
 	    public String showOrderItems(Model model) {
 	        List<OrderItem> orderItems = orderItemService.getAllOrderItems();
 	        model.addAttribute("orderItems", orderItems);
-	        return "orderItems"; // JSP page to display order items
+	        return renderwithbase(model,"/pages/user/orderItems"); // JSP page to display order items
 	    }
 
 	    @PostMapping("/orderItems/save")

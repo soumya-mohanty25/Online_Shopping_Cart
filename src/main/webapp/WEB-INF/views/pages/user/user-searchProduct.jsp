@@ -1,17 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ include file= "user-header.jsp" %>
 
-<!DOCTYPE html>
-<html>
-<head>
     <title>Search Results - ${searchKeyword}</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/search.css">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     
-</head>
-<body>
-
     <h2>Search Results for "<span style="color:#e91e63">${searchKeyword}</span>"</h2>
 
     <c:if test="${empty products}">
@@ -35,5 +26,3 @@
             </div>
         </c:forEach>
     </div>
-    
-<%@ include file= "user-footer.jsp" %>

@@ -1,17 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>	
-<%@ include file= "user-header.jsp" %>
 
-<!DOCTYPE html>
-<html>
-<head>
 <meta charset="UTF-8">
 <title>my profile</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/profile.css">
-</head>
-<body>
-
     <!-- Profile Section -->
     <div class="profile-container">
         <h2>My Profile</h2>
@@ -30,5 +21,3 @@
            <button class="logout-button">Logout</button>
         </a>
      </div>
-
-<%@ include file= "user-footer.jsp" %>

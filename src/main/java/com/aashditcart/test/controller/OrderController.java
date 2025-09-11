@@ -30,7 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 @ControllerAdvice
 @Slf4j
 @RequestMapping("/orders")
-public class OrderController {
+public class OrderController extends BaseController{
 
 	private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 
@@ -54,7 +54,7 @@ public class OrderController {
 
 	            List<Order> orders = orderService.getOrdersByUser(user);
 	            model.addAttribute("orders", orders);
-	            return "user-order";
+	            return renderwithbase(model,"/pages/user/user-order");
 
 	        } catch (Exception e) {
 	            log.error("Error viewing orders for user", e);
@@ -107,7 +107,7 @@ public class OrderController {
 
 	            List<Order> orders = orderService.getAllOrders();
 	            model.addAttribute("orders", orders);
-	            return "admin-manageOrder";
+	            return renderwithbase(model,"/pages/admin/admin-manageOrder");
 	        } catch (Exception e) {
 	            log.error("Error managing orders", e);
 	            return "error";
@@ -173,7 +173,7 @@ public class OrderController {
 
 	    	        model.addAttribute("orderId", orderId);
 	    	        model.addAttribute("addresses", addresses);
-	    	        return "user-chooseAddress";
+	    	        return renderwithbase(model,"/pages/user/user-chooseAddress");
 
 	    	    } catch (Exception e) {
 	    	        log.error("Error choosing address for order ID: {}", orderId, e);

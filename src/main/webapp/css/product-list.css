@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+	
 .productlist {
     display: flex;
     justify-content: center; /* Center horizontally */

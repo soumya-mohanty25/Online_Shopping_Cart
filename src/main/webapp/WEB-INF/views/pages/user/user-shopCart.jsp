@@ -1,18 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ include file= "user-header.jsp" %>
 
-<!DOCTYPE html>
-<html>
-<head>
     <title>Shopping Cart</title>
-    <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/images/logo.png">
     
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/cart.css">
-</head>
-<body>
-
    <!-- Cart Section -->
   <main class="cart-container">
     <h2>Shopping Cart</h2>
@@ -67,9 +57,3 @@
         </c:otherwise>
     </c:choose>
 </main>
-<!-- Footer -->
-     <div class="foot">
-        <p style="color: white;">&copy; 2025<a style="color: white; text-decoration: none;" href="https://r.search.yahoo.com/_ylt=AwrKAwt5KgZoOQIA_1W7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1746444153/RO=10/RU=https%3a%2f%2fwww.aashditnutritech.com%2f/RK=2/RS=ytwGym55WBZ5FFMKmYO_MC6i2Gg-">   Aashdit Nutritech</a>. All rights reserved.</p>
-    </div>
-   </body>
-</html>

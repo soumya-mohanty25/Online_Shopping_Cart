@@ -53,6 +53,7 @@ public class CartServiceImpl implements CartService {
 	            return null;
 	        }
 	}
+	
 	@Override
 	@Transactional
 	public void addProductToCart(User user, Product product, int quantity) {
@@ -146,6 +147,7 @@ public class CartServiceImpl implements CartService {
 	        }
 		
 	}
+	
 	@Override
 	public Cart saveCart(Cart cart) {
 		try {
@@ -155,6 +157,7 @@ public class CartServiceImpl implements CartService {
             return null;
         }
 	}
+	
 	@Override
 	public void updateCartItemQuantity(Long cartItemId, int quantity) {
 		 try {

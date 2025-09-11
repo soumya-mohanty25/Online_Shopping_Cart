@@ -1,19 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ include file= "user-header.jsp" %>
 
-
-<!DOCTYPE html>
-<html>
-<head>
     <meta charset="UTF-8">
     <title>Edit Profile</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/edit-profile.css">
-    
-</head>
-<body>
-   
+
     <!-- Edit Profile Section -->
     <div class="edit-profile-container">
         <h2>Edit Profile</h2>
@@ -49,4 +39,3 @@
             <input type="submit" value="Save Changes" class="submit-button">
         </form>
     </div>
-<%@ include file= "user-footer.jsp" %>

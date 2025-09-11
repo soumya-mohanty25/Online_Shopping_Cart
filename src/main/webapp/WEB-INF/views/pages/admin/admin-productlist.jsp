@@ -1,15 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>	
 <%@ include file= "admin-header.jsp" %>
-<!DOCTYPE html>
-<html>
-<head>
+
 <meta charset="UTF-8">
 <title>Product list</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/product-list.css">
-</head>
-<body>
+
    
      <div class= "productlist">
     <hr>
@@ -38,4 +35,3 @@
         </c:forEach>
     </table>
     </div>
-<%@ include file= "admin-footer.jsp" %>

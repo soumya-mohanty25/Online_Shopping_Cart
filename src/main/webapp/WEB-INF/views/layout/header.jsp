@@ -1,14 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
     <head>
-             <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/images/logo.png">
+         <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/images/logo.png">
     </head>
     <header class="header">
         <div class="header-left">
-            <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo" class="header-logo">
-            <h1>NUTRITECH CART</h1>
-        </div>
+		    <img src="${pageContext.request.contextPath}/images/logo.png" alt="Logo" class="header-logo">
+		    <div class="branding-text">
+		        <h1 class="site-title">Verdant Roots</h1>
+		        <p class="tagline">Nature at Your Doorstep</p>
+		    </div>
+		</div>
 
         <form action="${pageContext.request.contextPath}/products/search" method="get" class="search-container">
              <img src="${pageContext.request.contextPath}/images/logo.png" alt="Search Logo" class="search-logo">

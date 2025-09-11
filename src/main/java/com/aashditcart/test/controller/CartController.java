@@ -27,7 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 @ControllerAdvice
 @Slf4j
 @RequestMapping("/carts")
-public class CartController {
+public class CartController extends BaseController{
 
 	private static final Logger logger = LoggerFactory.getLogger(CartController.class);
 
@@ -64,7 +64,7 @@ public class CartController {
 	        }
 
 	        model.addAttribute("cart", cart);
-	        return "user-shopCart";
+	        return renderwithbase(model,"/pages/user/user-shopCart");
 	    } catch (Exception e) {
 	        log.error("Error while viewing cart", e);
 	        model.addAttribute("error", "Unable to load cart.");
@@ -150,11 +150,11 @@ public class CartController {
 
 		        if (cart == null || cart.getCartItems().isEmpty()) {
 		            model.addAttribute("error", "Your cart is empty.");
-		            return "user-shopCart";
+		            return renderwithbase(model,"/pages/user/user-shopCart");
 		        }
 
 		        model.addAttribute("cart", cart);
-		        return "user-checkout";
+		        return renderwithbase(model,"/pages/user/user-checkout");
 		    } catch (Exception e) {
 		        log.error("Error during checkout", e);
 		        model.addAttribute("error", "Unable to proceed to checkout.");

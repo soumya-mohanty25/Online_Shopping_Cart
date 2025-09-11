@@ -23,7 +23,7 @@ import jakarta.servlet.http.HttpSession;
 @Controller
 @ControllerAdvice
 @RequestMapping("/users")
-public class UserController {
+public class UserController extends BaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -36,7 +36,7 @@ public class UserController {
             User user = (User) session.getAttribute("loggedInUser");
             if (user != null) {
                 session.setAttribute("username", user.getFirstName());
-                return "user-dashboard";
+                return renderwithbase(model, "/pages/user/user-dashboard");
             } else {
                 return "redirect:/users/login";
             }
@@ -50,7 +50,7 @@ public class UserController {
     public String showRegistrationForm(Model model) {
     	try {
             model.addAttribute("user", new User());
-            return "user-registration";
+            return renderwithbase(model,"/pages/user/user-registration");
         } catch (Exception e) {
             logger.error("Error loading registration form: ", e);
             return "redirect:/users/login";
@@ -72,8 +72,8 @@ public class UserController {
     }
     
     @GetMapping("/login")
-    public String showLoginPage() {
-        return "user-login";
+    public String showLoginPage(Model model) {
+        return renderwithbase(model,"/pages/user/user-login");
     }
 
     @PostMapping("/login")
@@ -88,12 +88,12 @@ public class UserController {
                 return "redirect:/users/profile";
             } else {
                 model.addAttribute("errorMessage", "Invalid credentials. Please try again.");
-                return "user-login";
+                return "/pages/user/user-login";
             }
         } catch (Exception e) {
             logger.error("Login error: ", e);
             model.addAttribute("errorMessage", "Login failed. Try again.");
-            return "user-login";
+            return "/pages/user/user-login";
         }
     }
 
@@ -132,7 +132,7 @@ public class UserController {
              User loggedInUser = (User) session.getAttribute("loggedInUser");
              if (loggedInUser != null && loggedInUser.getId().equals(id)) {
                  model.addAttribute("user", loggedInUser);
-                 return "user-profile";
+                 return renderwithbase(model,"/pages/user/user-profile");
              }
              return "redirect:/users/login";
          } catch (Exception e) {
@@ -147,7 +147,7 @@ public class UserController {
             User loggedInUser = (User) session.getAttribute("loggedInUser");
             if (loggedInUser != null && loggedInUser.getId().equals(id)) {
                 model.addAttribute("user", loggedInUser);
-                return "user-editProfile";
+                return renderwithbase(model,"/pages/user/user-editProfile");
             }
             return "redirect:/users/profile";
         } catch (Exception e) {
@@ -188,13 +188,13 @@ public class UserController {
 
 
     @GetMapping("/contactus")
-    public String showContactus()
+    public String showContactus(Model model)
     {
     	 try {
-             return "user-contactus";
+             return renderwithbase(model,"/pages/user/user-contactus");
          } catch (Exception e) {
              logger.error("Error loading Contact Us page: ", e);
-             return "user-dashboard";
+             return renderwithbase(model,"user-dashboard");
          }
     }
 }

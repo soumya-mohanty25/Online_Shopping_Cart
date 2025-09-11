@@ -1,16 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ include file= "user-header.jsp" %>
 
-<!DOCTYPE html>
-<html>
-<head>
     <title>Checkout</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/checkout.css">
-</head>
-<body>
-
     <h2>Order Summary</h2>
         
     <table class="checkout-table">
@@ -44,5 +35,3 @@
     <form action="/orders/place" method="post">
         <button type="submit" class="confirm-order-btn">Confirm Order</button>
     </form>
-
-<%@ include file= "user-footer.jsp" %>

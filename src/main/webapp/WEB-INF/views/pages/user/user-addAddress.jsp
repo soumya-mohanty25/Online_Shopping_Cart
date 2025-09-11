@@ -1,17 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ include file= "user-header.jsp" %>
 
-<!DOCTYPE html>
-<html>
-<head>
     <meta charset="UTF-8">
     <title>Add Address</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/add-address.css">
-</head>
-<body>
-
 <div class= "form-container">
     <h2>Add New Address</h2>
     
@@ -40,5 +31,3 @@
     <br>
     <a href="${pageContext.request.contextPath}/users/addresses">Back to Addresses</a>
   </div>  
-
-<%@ include file= "user-footer.jsp" %>

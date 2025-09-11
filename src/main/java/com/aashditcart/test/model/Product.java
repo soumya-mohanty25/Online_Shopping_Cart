@@ -36,11 +36,14 @@ public class Product {
 	private int stock;
 	
 	@Column(name = "product_image_path")
-	private String imagePath;
+	private String imageUrl;
+	
+//	@Column(name = "product_image_path")
+//	private String imagePath;
 	
 //	@Column(name = "is_active")
 //	private Boolean isActive;
 	
-	@Transient
-	private MultipartFile  image;
+//	@Transient
+//	private MultipartFile  image;
 }

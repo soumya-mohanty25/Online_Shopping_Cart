@@ -1,18 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ include file= "user-header.jsp" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Shop Products</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/shop.css">    
-    
-</head>
-<body>
-	
-    <h2>Shop Products</h2>
+    <h2 style ="color: #c1feff">Shop Products</h2>
     
     <div class="product-container">
         <c:forEach var="product" items="${products}">
@@ -30,4 +19,3 @@
             </div>
         </c:forEach>
     </div>
-<%@ include file= "user-footer.jsp" %>

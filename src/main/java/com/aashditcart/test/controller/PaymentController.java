@@ -8,6 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @ControllerAdvice
 @Slf4j
-public class PaymentController {
+public class PaymentController extends BaseController{
 
 }

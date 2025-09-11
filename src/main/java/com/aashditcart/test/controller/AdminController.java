@@ -14,12 +14,12 @@ import lombok.extern.slf4j.Slf4j;
 @ControllerAdvice
 @Slf4j
 @RequestMapping("/admins")
-public class AdminController {
+public class AdminController extends BaseController{
 
 	private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
 
 	@GetMapping("/dashboard")
     public String adminDashboard(Model model) {
-        return "admin-dashboard";
+        return renderwithbase(model,"/pages/admin/admin-dashboard");
     }
 }

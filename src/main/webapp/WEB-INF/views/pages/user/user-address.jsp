@@ -1,25 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ include file= "user-header.jsp" %>
 
-<!DOCTYPE html>
-<html>
-<head>
     <meta charset="UTF-8">
-    <title>Manage Address</title>
-             <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/images/logo.png">
-    
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/address.css">  
-    
-</head>
-<body>
-
-
+    <title>Manage Address</title> 
     <div class="heading-box">
     <h2>Manage Your Addresses</h2>
     </div>
-
     <c:choose>
         <c:when test="${empty addresses}">
           <p style= "color:white;">No address found. </p>
@@ -57,9 +43,3 @@
             </a>
         </c:otherwise>
     </c:choose>
-<!-- Footer -->
-     <div class="foot">
-        <p style="color: white;">&copy; 2025<a style="color: white; text-decoration: none;" href="https://r.search.yahoo.com/_ylt=AwrKAwt5KgZoOQIA_1W7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1746444153/RO=10/RU=https%3a%2f%2fwww.aashditnutritech.com%2f/RK=2/RS=ytwGym55WBZ5FFMKmYO_MC6i2Gg-">   Aashdit Nutritech</a>. All rights reserved.</p>
-    </div>
-   </body>
-</html>

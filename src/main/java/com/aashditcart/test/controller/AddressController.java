@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 @ControllerAdvice
 @Slf4j
 @RequestMapping("/users")
-public class AddressController {
+public class AddressController extends BaseController{
 	
 	private static final Logger logger = LoggerFactory.getLogger(AddressController.class);
 
@@ -47,7 +47,7 @@ public class AddressController {
 	            }
 	            List<Address> addresses = addressService.getAddressesByUser(user.getId());
 	            model.addAttribute("addresses", addresses);
-	            return "user-address";
+	            return renderwithbase(model,"/pages/user/user-address");
 	        } catch (Exception e) {
 	            logger.error("Error while loading addresses: ", e);
 	            return "error"; // your error.jsp page
@@ -63,7 +63,7 @@ public class AddressController {
 	    	            return "redirect:/users/login";
 	    	        }
 	    	        model.addAttribute("address", new Address());
-	    	        return "user-addAddress";
+	    	        return renderwithbase(model,"/pages/user/user-addAddress");
 	    	    } catch (Exception e) {
 	    	        logger.error("Error while showing add address form: ", e);
 	    	        return "error";
@@ -100,7 +100,7 @@ public class AddressController {
 	    	            return "redirect:/users/addresses";
 	    	        }
 	    	        model.addAttribute("address", address);
-	    	        return "user-editAddress";
+	    	        return renderwithbase(model,"/pages/user/user-editAddress");
 	    	    } catch (Exception e) {
 	    	        logger.error("Error while loading edit address form for ID: " + id, e);
 	    	        return "error";
